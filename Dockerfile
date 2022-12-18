@@ -9,7 +9,7 @@ RUN mvn clean package -DskipTests
 # Package stage
 #
 FROM openjdk:11-jdk-slim
-COPY --from=build /target/springboot_render-0.0.1-SNAPSHOT.jar springboot_render-0.0.1-SNAPSHOT.jar
+COPY --from=build /target/coding_with_chandra-0.0.1-SNAPSHOT.jar coding_with_chandra-0.0.1-SNAPSHOT.jar
 # ENV PORT=8080
 EXPOSE 8080
-ENTRYPOINT ["java","-jar","springboot_render-0.0.1-SNAPSHOT.jar"]
+ENTRYPOINT ["java","-jar","coding_with_chandra-0.0.1-SNAPSHOT.jar"]
